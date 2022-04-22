@@ -69,7 +69,7 @@ int main() {
     bvec = _mm256_hadd_ps(bvec, bvec);
     bvec = _mm256_hadd_ps(bvec, bvec);
     _mm256_store_ps(a, bvec);
-    fx[i] -= a[0]
+    fx[i] -= a[0];
 
     // sum of fy[i]
     bvec = _mm256_permute2f128_ps(fyivec, fyivec, 1);
@@ -77,7 +77,7 @@ int main() {
     bvec = _mm256_hadd_ps(bvec, bvec);
     bvec = _mm256_hadd_ps(bvec, bvec);
     _mm256_store_ps(a, bvec);
-    fy[i] -= a[0]
+    fy[i] -= a[0];
 
     printf("%d %g %g\n",i,fx[i],fy[i]);
   }
